@@ -30,3 +30,67 @@ Built using **HTML, CSS, and JavaScript**, with smooth animations powered by **A
 
 ## 📂 Folder Structure
 
+WarmGIF/
+│
+├── index.html # Main HTML file
+├── style.css # Styling and responsive layout
+├── script.js # App functionality
+├── README.md # Documentation
+└── assets/ # (Optional) Image or icon files
+
+yaml
+Copy code
+
+---
+
+## ⚙️ How to Use
+
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/your-username/warmgif.git
+Navigate to the project folder
+
+bash
+Copy code
+cd warmgif
+Open index.html in your browser
+
+bash
+Copy code
+open index.html
+Start creating!
+
+Drag and drop your images/videos
+
+Adjust settings (speed, loop, quality, etc.)
+
+Click Create GIF and then Download
+
+📸 Demo (Optional)
+You can host this project using GitHub Pages:
+
+arduino
+Copy code
+https://your-username.github.io/warmgif/
+👨‍💻 Developer
+Created with ❤️ by Manav Singh
+
+📜 License
+This project is licensed under the MIT License – you’re free to use, modify, and distribute it.
+
+⭐ Show Your Support
+If you like this project, star it on GitHub ⭐
+It helps others discover it and motivates me to keep building awesome stuff!
+
+yaml
+Copy code
+
+---
+
+Would you like me to include a **preview image section** (e.g., a screenshot of your app at the top) in the README so it looks even more professional on GitHub?
+
+
+
+
+
+
