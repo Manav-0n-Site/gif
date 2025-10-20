@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WarmGIF | Create Beautiful GIFs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Vector Background Elements -->
+    <div class="vector vector-1"></div>
+    <div class="vector vector-2"></div>
+    <div class="vector vector-3"></div>
+    <div class="vector vector-4"></div>
+    <div class="vector vector-5"></div>
+
+    <div class="container">
+        <div class="creator-credit">
+            Created with ❤️ by <strong>Manav</strong>
+        </div>
+        
+        <div class="header" data-aos="fade-down">
+            <div class="logo">
+                <i class="fas fa-film logo-icon"></i>
+            </div>
+            <h1>WarmGIF Maker</h1>
+            <p>Create beautiful, high-quality GIFs with our easy-to-use tool</p>
+        </div>
+        
+        <div class="app-container">
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea" data-aos="fade-right" data-aos-delay="100">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <p class="upload-text">Drag & Drop your images or video here</p>
+                    <p class="upload-subtext">Supports JPG, PNG, MP4, MOV (Max 20MB)</p>
+                    <button class="upload-btn" id="uploadBtn">
+                        <i class="fas fa-folder-open"></i> Browse Files
+                    </button>
+                    <input type="file" id="fileInput" accept="image/*,video/*" multiple style="display: none;">
+                </div>
+                
+                <div class="features" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <i class="fas fa-camera feature-icon"></i>
+                        <h3 class="feature-title">Record GIFs</h3>
+                        <p class="feature-desc">Use your camera to record custom GIFs</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-palette feature-icon"></i>
+                        <h3 class="feature-title">Customize</h3>
+                        <p class="feature-desc">Adjust speed, size, and effects</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-bolt feature-icon"></i>
+                        <h3 class="feature-title">Fast Processing</h3>
+                        <p class="feature-desc">Quick creation and download</p>
+                    </div>
+                </div>
+
+                <div class="presets" data-aos="fade-up" data-aos-delay="300">
+                    <button class="preset-btn" data-preset="social">
+                        <i class="fab fa-instagram"></i> Social Media
+                    </button>
+                    <button class="preset-btn" data-preset="meme">
+                        <i class="fas fa-grin-squint-tears"></i> Meme
+                    </button>
+                    <button class="preset-btn" data-preset="slideshow">
+                        <i class="fas fa-images"></i> Slideshow
+                    </button>
+                    <button class="preset-btn" data-preset="smooth">
+                        <i class="fas fa-wave-square"></i> Smooth
+                    </button>
+                </div>
+            </div>
+            
+            <div class="preview-section">
+                <div class="preview-header" data-aos="fade-left" data-aos-delay="100">
+                    <h2 class="preview-title">GIF Preview</h2>
+                    <span class="ai-badge"><i class="fas fa-magic"></i> AI Enhanced</span>
+                </div>
+                
+                <div class="preview-container" data-aos="flip-up" data-aos-delay="200">
+                    <div class="preview-content" id="previewContent">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="webcam-container" id="webcamContainer">
+                        <video id="webcamVideo" autoplay muted></video>
+                        <div class="webcam-overlay">Recording... <span id="timer">0s</span></div>
+                    </div>
+                </div>
+                
+                <div class="quality-indicator" data-aos="fade-up" data-aos-delay="300">
+                    <span class="quality-label">Estimated File Size</span>
+                    <span class="quality-value" id="fileSizeValue">0 KB</span>
+                </div>
+
+                <div class="customization-options" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="options-title"><i class="fas fa-sliders-h"></i> Customization</h3>
+                    <div class="options-grid">
+                        <div class="option-item">
+                            <div class="option-header">
+                                <span class="option-label">Speed</span>
+                                <span class="option-value" id="speedValue">100%</span>
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" min="50" max="200" value="100" class="slider" id="speed">
+                            </div>
+                        </div>
+                        <div class="option-item">
+                            <div class="option-header">
+                                <span class="option-label">Size</span>
+                                <span class="option-value" id="sizeValue">Medium</span>
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" min="1" max="3" value="2" class="slider" id="size">
+                            </div>
+                        </div>
+                        <div class="option-item">
+                            <div class="option-header">
+                                <span class="option-label">Loop</span>
+                                <span class="option-value" id="loopValue">Infinite</span>
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" min="1" max="10" value="0" class="slider" id="loop">
+                            </div>
+                        </div>
+                        <div class="option-item">
+                            <div class="option-header">
+                                <span class="option-label">Quality</span>
+                                <span class="option-value" id="qualityValue">High</span>
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" min="1" max="3" value="2" class="slider" id="quality">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="action-btn record-btn" id="recordBtn" data-aos="zoom-in" data-aos-delay="500">
+                        <i class="fas fa-video"></i> Record GIF
+                    </button>
+                    <button class="action-btn create-btn" id="createBtn" data-aos="zoom-in" data-aos-delay="600">
+                        <i class="fas fa-plus-circle"></i> Create GIF
+                    </button>
+                    <button class="action-btn download-btn" id="downloadBtn" disabled data-aos="zoom-in" data-aos-delay="700">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <button class="action-btn reset-btn" id="resetBtn" data-aos="zoom-in" data-aos-delay="800">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="credits" data-aos="fade-up" data-aos-delay="900">
+            <p>Designed and developed with ❤️ by <strong>Manav</strong></p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
